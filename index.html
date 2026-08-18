@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#130d11" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>给章老师的一封信</title>
+    <link rel="preload" href="assets/background.jpg" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img class="photo-layer" src="assets/background.jpg" alt="" aria-hidden="true" />
+    <div class="photo-shade" aria-hidden="true"></div>
+
+    <main id="app">
+      <section id="intro" class="stage stage--active" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">农历七月初七</p>
+          <h1 id="intro-title">给章老师的一封信</h1>
+          <p class="date-mark">2026.08.19</p>
+          <button id="start-button" class="button button--primary" type="button">
+            打开这封信
+          </button>
+        </div>
+      </section>
+
+      <section id="letter" class="stage" aria-label="七夕文字">
+        <button id="skip-button" class="button button--quiet skip-button" type="button">
+          跳过文字
+        </button>
+
+        <div class="letter-frame">
+          <p id="scene-text" class="scene-text" aria-hidden="true"></p>
+          <p id="announcer" class="sr-only" aria-live="polite"></p>
+        </div>
+
+        <div class="progress" aria-hidden="true">
+          <span id="progress-fill"></span>
+        </div>
+      </section>
+
+      <section id="film" class="stage stage--film" aria-label="我们的故事视频">
+        <div class="film-shell">
+          <video
+            id="story-video"
+            poster="assets/background.jpg"
+            preload="metadata"
+            playsinline
+            aria-label="属于我们的故事"
+          >
+            <source src="assets/story.mp4" type="video/mp4" />
+            你的浏览器暂不支持视频播放。
+          </video>
+
+          <div id="film-prompt" class="film-prompt">
+            <p>接下来，是属于我们的故事。</p>
+            <button id="play-button" class="button button--primary" type="button">
+              继续看下去
+            </button>
+          </div>
+        </div>
+        <p id="video-status" class="video-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="ending" class="stage" aria-labelledby="ending-title">
+        <div class="ending-copy">
+          <p id="ending-title" class="ending-line">七夕快乐，我亲爱的章老师。</p>
+          <p class="ending-line ending-line--last">故事未完，下一页由我们一起写。</p>
+          <div class="ending-actions">
+            <button id="replay-video" class="button button--primary" type="button">
+              再看一遍
+            </button>
+            <button id="restart-letter" class="button button--quiet" type="button">
+              从头开始
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

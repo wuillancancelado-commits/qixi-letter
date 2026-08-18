@@ -1,0 +1,7 @@
+# Keep the original private media outside the public repository.
+/视频.mp4
+/背景图.jpg
+
+# Local tooling files.
+.DS_Store
+Thumbs.db
